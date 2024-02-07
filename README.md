@@ -17,6 +17,14 @@ This provided the models with a substatial amount of "signal" to learn from, and
 ### Evaluation
 Even though this data was not exceptionally large, it still required a long time to train each model iteration. I used both [Tensorboard](https://www.tensorflow.org/tensorboard) and [Weights and Biases](https://wandb.ai/site) to create dashboards that tracked model performance across training epochs. 
 
+![Training Metrics from the First Model](./files/model_metrics.png)
+
+Even when the first model made incorrect predictions, there was a clear proximity to the correct species. Take for example, this incorrect prediction:
+
+![Mis-identified Bird Species](./files/incorrect_predictions.png)
+
+
+
 
 ### Conclusion
 Due to the high quality of the images, as well as the tuning of model configuration, I was able to achieve a very high prediction accuracy of <ACCURACY>. This model has also been deployed on the streamlit site <STREAMLIT LINK>, and I encourage you to test the model's predictive ability with any bird image that you can find.  
