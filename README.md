@@ -19,6 +19,8 @@ Even though this data was not exceptionally large, it still required a long time
 
 ![Training Metrics from the First Model](./files/model_metrics.png)
 
+![Training Metrics from the First Model](./files/accuracy.png)
+
 Even when the first model made incorrect predictions, there was a clear proximity to the correct species. Take for example, this incorrect prediction:
 
 ![Mis-identified Bird Species](./files/incorrect_predictions.png)
