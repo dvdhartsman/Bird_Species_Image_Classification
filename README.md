@@ -27,4 +27,4 @@ Even when the first model made incorrect predictions, there was a clear proximit
 
 
 ### Conclusion
-Due to the high quality of the images, as well as the tuning of model configuration, I was able to achieve a very high prediction accuracy of <ACCURACY>. This model has also been deployed on the streamlit site <STREAMLIT LINK>, and I encourage you to test the model's predictive ability with any bird image that you can find.  
+Due in part to the high number of class labels, I was only able to achieve an accuracy of roughly 43%. This model has been deployed on streamlit, and I encourage you to test the model's predictive ability with any bird image that you can find. In order to improve upon the model further, I believe that both more data and more computational resources would be required. Please feel free to explore the project in more detail by examining my [notebook](https://github.com/dvdhartsman/Bird_Species_Image_Classification/blob/main/Bird_Classification_1.ipynb), and contact me with any questions you may have.
