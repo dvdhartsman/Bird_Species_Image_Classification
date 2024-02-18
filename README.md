@@ -5,6 +5,8 @@
 ![The majestic Puteketeke, New Zealand's "Bird of the Century"](./files/puteketeke.png)
 
 ### Overview
+<hr style="border: 2px solid red">
+
 In this project, I created a Convolutional Neural Network modeled on data from a Kaggle dataset containing roughly 90k images of 525 different bird species. I used tensorflow to create the Convolutional Neural Networks. The purpose was to maximize the model's ability to predict the correct species of the bird from an image. 
 
 ### Data
