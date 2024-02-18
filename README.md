@@ -29,4 +29,8 @@ Even when the first model made incorrect predictions, there was a clear proximit
 
 
 ### Conclusion
-Due in part to the high number of class labels, I was only able to achieve an accuracy of roughly 43%. This model has been deployed on streamlit, and I encourage you to test the model's predictive ability with any bird image that you can find. In order to improve upon the model further, I believe that both more data and more computational resources would be required. Please feel free to explore the project in more detail by examining my [notebook](https://github.com/dvdhartsman/Bird_Species_Image_Classification/blob/main/Bird_Classification_1.ipynb), and contact me with any questions you may have.
+I was only able to achieve an accuracy of roughly 43% on my first model, however I was able to eventually achieve much better results by leveraging the EfficientNetB0 architecture. I achieved accuracy scores on test data of around 98% using this architecture. I additionally tested the model on "WILD" images from the internet, and the model still performed very well. The process for preparing this "wild" data for model predictions required resizing it from its natural pixel ratio to (224, 224, 3) and then accounting for the model being trained on batches needed to be addressed as well by using np.expand_dims([image_file], 0). 
+
+![Representative of the "Wild" Image Preparation](./files/abbotts_compare.jpg)
+
+This model has been deployed on streamlit, and I encourage you to test the model's predictive ability with any bird image that you can find. In order to improve upon the model further, I believe that both more data and more computational resources would be required. Please feel free to explore the project in more detail by examining my [notebook](https://github.com/dvdhartsman/Bird_Species_Image_Classification/blob/main/Bird_Classification_1.ipynb), and contact me with any questions you may have.
