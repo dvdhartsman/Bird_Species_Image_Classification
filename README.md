@@ -1,6 +1,11 @@
 # Bird Species Image Classification:
 ### Using Computer Vision to Identify 525 Different Bird Species
 ##### David Hartsman
+[First Notebook](https://github.com/dvdhartsman/Bird_Species_Image_Classification/edit/main/README.md#:~:text=.gitignore-,Bird_Classification_1,-.ipynb)
+Preliminary EDA | Plotting | Data Understanding
+
+[Second Notebook](https://github.com/dvdhartsman/Bird_Species_Image_Classification/edit/main/README.md#:~:text=Bird_Classification_1.ipynb-,Bird_Classification_2,-.ipynb)
+Subsequent Model Iterations | Final Model Built on EfficientNetB0 | Final Thoughts
 
 ![The majestic Puteketeke, New Zealand's "Bird of the Century"](./files/puteketeke.png)
 
