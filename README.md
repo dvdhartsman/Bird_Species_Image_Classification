@@ -5,22 +5,23 @@
 ![The majestic Puteketeke, New Zealand's "Bird of the Century"](./files/puteketeke.png)
 
 ### Overview
-In this project, I utilized data from a Kaggle dataset containing roughly 90k images of 525 different bird species. I used tensorflow to create Convolusional Neural Networks to predict the correct species of the bird from an image. 
+In this project, I created a Convolutional Neural Network modeled on data from a Kaggle dataset containing roughly 90k images of 525 different bird species. I used tensorflow to create the Convolutional Neural Networks. The purpose was to maximize the model's ability to predict the correct species of the bird from an image. 
 
 ### Data
-The data in this project were "RGB" images with dimensions of 224 pixels by 224 pixels. The images were curated to be of very high quality, and the birds themselves comprised roughly 50% of each image. 
+The data in this project were "RGB" (3-channel, red-green-blue color) images with dimensions of 224 pixels by 224 pixels. The images were curated to be of very high quality.
 
 ![Example of Birds from the Data](./files/example_birds.jpg)
 
-This provided the models with a substatial amount of "signal" to learn from, and should have aided in improving the accuracy of predictions. Keras has built in classes and functions that facilitated the creation of a data pipeline from the image directories to the model itself. That allowed me to use the built in functions to extract the numeric image data, scale it, and augment it, AND ALSO extract the correct labels from the data without having to explicitly code a labeling function. 
+This provided the models with a substatial amount of "signal" to learn from, and aided in improving the accuracy of predictions. Keras comes with built-in classes and functions that facilitated the creation of a data pipeline directly from the local image directories to the model itself. That allowed me to use the built-in functions to extract the numeric image data, scale it, and augment it, and also extract the correct labels from the data without having to explicitly code a labeling function. 
 
 ### Evaluation
-Even though this data was not exceptionally large, it still required a long time to train each model iteration. I used both [Tensorboard](https://www.tensorflow.org/tensorboard) and [Weights and Biases](https://wandb.ai/site) to create dashboards that tracked model performance across training epochs. 
+This data was large enough, in combination with the depths and widths of model iterations, to still require substantial time to train each model iteration. I used both [Tensorboard](https://www.tensorflow.org/tensorboard) and [Weights and Biases](https://wandb.ai/site) to create dashboards that tracked model performance across training epochs. The models also return dictionaries containing training logs for the metrics that were being tracked over each epoch of training. 
 
 ![Training Metrics from the First Model](./files/model_metrics.png)
 
 ![Training Metrics from the First Model](./files/accuracy.png)
 
+In the early stages of modeling, accuracy was topping out at around 40%. 
 Even when the first model made incorrect predictions, there was a clear proximity to the correct species. Take for example, this incorrect prediction:
 
 ![Mis-identified Bird Species](./files/incorrect_predictions.png)
