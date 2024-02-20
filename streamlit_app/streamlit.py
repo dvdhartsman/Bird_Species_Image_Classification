@@ -145,12 +145,11 @@ def main():
     if st.button("Yes"):
         st.write("Yeah, we thought so...")
     if st.button("No"):
-        user_input = st.text_input("What is the name of the bird you provided? ")
-        
-    if user_input.upper in classes.values():
-        st.write("The model should've known that, but we made an incorrect prediction")
-    elif user_input.upper not in classes.values():
-        st.write("This type of bird is not present in our training data, sorry about that")
+        user_input = st.text_input("What is the name of the bird you provided?")
+        if user_input.upper() in classes.values():
+            st.write("The model should've known that, but we made an incorrect prediction")
+        elif user_input.upper() not in classes.values():
+            st.write("This type of bird is not present in our training data, sorry about that")
     
 
     github_project_url = "https://github.com/dvdhartsman/Bird_Species_Image_Classification"
