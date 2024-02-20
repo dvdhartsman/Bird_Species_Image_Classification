@@ -10,7 +10,7 @@ import pandas as pd
 import time
 
 # Load the model 
-model = tf.keras.models.load_model("FINAL_bird_classifier_2.h5")
+model = tf.keras.models.load_model("streamlit_app/FINAL_bird_classifier_2.h5")
 
 # For any given bird image, it needs to conform to an expected format (224,224,3)
 def format_image(img_path):
@@ -57,7 +57,7 @@ def main():
     st.subheader("Give it a try!")
     
     # Load your chest X-ray images (replace these paths with your actual file paths)
-    image_paths = ["Ant_Bird_1.jpg", "Lazuli_Bunting_1.jpg", "Peregrine_Falcon_1.jpg", "Tawny_Frogmouth_1.jpg"]
+    image_paths = ["streamlit_app/Ant_Bird_1.jpg", "streamlit_app/Lazuli_Bunting_1.jpg", "streamlit_app/Peregrine_Falcon_1.jpg", "streamlit_app/Tawny_Frogmouth_1.jpg"]
 
     # Function to resize the image to a specified width and height -> for display purposes only
     def resize_image(image_path, width, height):
