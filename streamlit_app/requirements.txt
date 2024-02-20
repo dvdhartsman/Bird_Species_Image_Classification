@@ -5,3 +5,4 @@ streamlit==1.31.1
 tensorflow==2.15.0
 matplotlib==3.8.3
 pandas==2.2.0
+keras==2.15.0
