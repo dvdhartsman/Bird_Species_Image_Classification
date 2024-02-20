@@ -146,9 +146,9 @@ def main():
         st.write("Yeah, we thought so...")
     if st.button("No"):
         user_input = st.text_input("What is the name of the bird you provided? ")
-        if user_input.upper is in classes.values():
+        if user_input.upper in classes.values():
             st.write("The model should've known that, but we made an incorrect prediction")
-        else: 
+        elif user_input.upper not in classes.values():
             st.write("This type of bird is not present in our training data, sorry about that")
     
 
