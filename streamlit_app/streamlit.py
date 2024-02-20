@@ -166,15 +166,15 @@ def main():
             if st.session_state['user_input'].upper() in classes.values():
                 st.write("The model should've gotten that correct, but we made an incorrect prediction")
             else:
-                st.write("This type of bird was not present in our training data, sorry about that."
+                st.write("This type of bird was not present in our training data, sorry about that.")
     
 
     github_project_url = "https://github.com/dvdhartsman/Bird_Species_Image_Classification"
-    github_project_markdown = f'[GitHub]({github_project_url})'
+    github_project_markdown = f'[our GitHub repository]({github_project_url})'
 
     st.write("   ")
     st.markdown("---")
-    st.write(f"This model is based on a convolutional neural network (CNN) image classification model using Python, Tensorflow, and Keras, and it is informed by the EfficientNetB0 architecture. The model currently has an approximate 98% accuracy rate and can be found in {github_project_markdown}. Please feel free to connect with me on LinkedIn or via email.") 
+    st.write(f"This model is a convolutional neural network (CNN) image classification model created with Python, Tensorflow, and Keras. It is informed by the EfficientNetB0 architecture. The model currently has an approximate 98% accuracy score. Check out our work at {github_project_markdown}. Please feel free to connect with us on LinkedIn or via email.") 
 
 # Sidebar - Bio info
 st.sidebar.title('About Us:')
