@@ -149,7 +149,7 @@ def main():
         if user_input:
             if user_input.upper() in classes.values():
                 st.write("The model should've known that, but we made an incorrect prediction")
-            elif user_input.upper() not in classes.values():
+            else:
                 st.write("This type of bird is not present in our training data, sorry about that")
     
 
