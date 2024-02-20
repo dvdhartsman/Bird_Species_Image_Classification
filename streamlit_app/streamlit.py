@@ -22,12 +22,12 @@ def format_image(img_path):
         return resized_image
     except Exception as e:
         # Streamlit warning about non-conforming data
-        st.warning("Please upload a valid radiograph.")
+        st.warning("Please upload a valid image.")
         return None
 
 # Dictionary of Class/Species Values 
 # Load the csv, easier than manually writing the labels
-class_dictionary = pd.read_csv('/class_dictionary.csv', index_col=0)
+class_dictionary = pd.read_csv('class_dictionary.csv', index_col=0)
 # Create a dictionary with the correct labels
 classes = class_dictionary.to_dict()["0"]
 
@@ -56,7 +56,7 @@ def main():
     st.subheader("Give it a try!")
     
     # Load your chest X-ray images (replace these paths with your actual file paths)
-    image_paths = ["ANTBIRD/1.jpg", "LAZULI BUNTING/1.jpg", "PEREGRINE FALCON/1.jpg", "TAWNY FROGMOUTH/4.jpg"]
+    image_paths = ["Ant_Bird_1.jpg", "Lazuli_Bunting_1.jpg", "Peregrine_Falcon_1.jpg", "Tawny_Frogmouth_1.jpg"]
 
     # Function to resize the image to a specified width and height -> for display purposes only
     def resize_image(image_path, width, height):
