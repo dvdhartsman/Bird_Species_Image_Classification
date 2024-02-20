@@ -2,7 +2,6 @@
 import numpy as np
 import tensorflow as tf
 import matplotlib.image as mpimg
-from tensorflow.keras.models import load_model
 import os
 import streamlit as st
 import joblib
