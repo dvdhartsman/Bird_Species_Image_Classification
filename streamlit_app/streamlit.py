@@ -141,23 +141,55 @@ def main():
     st.write("   ")
     st.markdown("---")
     
+    if 'no_clicked' not in st.session_state:
+        st.session_state['no_clicked'] = False
+    if 'user_input' not in st.session_state:
+        st.session_state['user_input'] = ""
+
     st.write("Were we correct?")
+
     if st.button("Yes"):
+        # Reset the state when "Yes" is clicked
+        st.session_state['no_clicked'] = False
         st.write("Yeah, we thought so...")
+
     if st.button("No"):
-        user_input = st.text_input("What is the name of the bird you provided?").strip()
-        st.write(user_input)
-        if user_input:
-            if user_input.upper() in classes.values():
+        # Set a flag to keep track of the "No" button being clicked
+        st.session_state['no_clicked'] = True
+
+    # Check the session state to decide whether to show the input box
+    if st.session_state['no_clicked']:
+        # Use session_state to capture and persist user input
+        st.session_state['user_input'] = st.text_input("What is the name of the bird you provided?")
+        if st.session_state['user_input']:
+            # Assuming 'classes' is a dictionary available in your app
+            if st.session_state['user_input'].upper() in classes.values():
                 st.write("The model should've known that, but we made an incorrect prediction")
             else:
                 st.write("This type of bird is not present in our training data, sorry about that")
+    
+    
+    
+    
+#     st.write("Were we correct?")
+#     if st.button("Yes"):
+#         st.write("Yeah, we thought so...")
+#     if st.button("No"):
+#         st.write("Let's check to see if your subitted bird is in our data."
+#         user_input = st.text_input("What is the name of the bird you provided? (Check Spelling)").strip()
+#         st.write(f"{user_input.title()}, eh?")
+#         if user_input:
+#             if user_input.upper() in classes.values():
+#                 st.write("The model should've known that, but we made an incorrect prediction")
+#             else:
+#                 st.write("This type of bird is not present in our training data, sorry about that")
     
 
     github_project_url = "https://github.com/dvdhartsman/Bird_Species_Image_Classification"
     github_project_markdown = f'[GitHub]({github_project_url})'
 
     st.write("   ")
+    st.markdown("---")
     st.write(f"This model is based on a convolutional neural network (CNN) image classification model using Python, Tensorflow, and Keras, and it is informed by the EfficientNetB0 architecture. The model currently has an approximate 98% accuracy rate and can be found in {github_project_markdown}. Please feel free to connect with me on LinkedIn or via email.") 
 
 # Sidebar - Bio info
