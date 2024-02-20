@@ -7,6 +7,7 @@ import os
 import streamlit as st
 import joblib
 from PIL import Image
+import pandas as pd
 
 # Load the model 
 model = tf.keras.models.load_model("FINAL_bird_classifier_2.h5")
