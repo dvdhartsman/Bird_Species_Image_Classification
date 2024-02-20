@@ -145,9 +145,7 @@ def main():
     if st.button("Yes"):
         st.write("Yeah, we thought so...")
     if st.button("No"):
-        with st.form(key='my_form'):
-            user_input = st.text_input("What is the name of the bird you provided?")
-            submit_button = st.form_submit_button(label='Submit')
+        if st.button("Submit"):
             if submit_button:
                 st.write(user_input)
                 if user_input:
@@ -155,6 +153,7 @@ def main():
                         st.write("The model should've known that, but we made an incorrect prediction")
                     else:
                         st.write("This type of bird is not present in our training data, sorry about that")
+                        
 #     if st.button("No"):
 #         user_input = st.text_input("What is the name of the bird you provided?")
 #         st.write(user_input)
