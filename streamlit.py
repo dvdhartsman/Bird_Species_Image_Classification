@@ -28,7 +28,7 @@ def format_image(img_path):
 
 # Dictionary of Class/Species Values 
 # Load the csv, easier than manually writing the labels
-class_dictionary = pd.read_csv('class_dictionary.csv', index_col=0)
+class_dictionary = pd.read_csv('streamlit_app/class_dictionary.csv', index_col=0)
 # Create a dictionary with the correct labels
 classes = class_dictionary.to_dict()["0"]
 
