@@ -146,8 +146,8 @@ def main():
         st.write("Yeah, we thought so...")
     if st.button("No"):
         user_input = st.text_input("What is the name of the bird you provided?")
+        st.write(user_input)
         if user_input:
-            st.write(user_input)
             if user_input.upper() in classes.values():
                 st.write("The model should've known that, but we made an incorrect prediction")
             else:
