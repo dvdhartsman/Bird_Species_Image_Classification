@@ -49,7 +49,7 @@ def main():
     st.title("Bird Species Classification")
 
     # Introduction to the purpose of the app
-    st.write("Do you have a picture of a bird that you can't identify? This model can correctly identify the name of 525 different species of birds! This model is capable of correctly identifying birds with nearly 98% accuracy.")
+    st.write("Do you have a picture of a bird that you can't identify? Our model can correctly identify the names of 525 different species of birds with roughly 98% accuracy.")
 
     # Insert a line or divider
     st.markdown("---")
@@ -146,12 +146,12 @@ def main():
     if 'user_input' not in st.session_state:
         st.session_state['user_input'] = ""
 
-    st.write("Were we correct?")
+    st.write("Was our prediction correct?")
 
     if st.button("Yes"):
         # Reset the state when "Yes" is clicked
         st.session_state['no_clicked'] = False
-        st.write("Yeah, we thought so...")
+        st.write("Yeah, we thought so... Not too shabby...")
 
     if st.button("No"):
         # Set a flag to keep track of the "No" button being clicked
@@ -164,25 +164,9 @@ def main():
         if st.session_state['user_input']:
             # Assuming 'classes' is a dictionary available in your app
             if st.session_state['user_input'].upper() in classes.values():
-                st.write("The model should've known that, but we made an incorrect prediction")
+                st.write("The model should've gotten that correct, but we made an incorrect prediction")
             else:
-                st.write("This type of bird is not present in our training data, sorry about that")
-    
-    
-    
-    
-#     st.write("Were we correct?")
-#     if st.button("Yes"):
-#         st.write("Yeah, we thought so...")
-#     if st.button("No"):
-#         st.write("Let's check to see if your subitted bird is in our data."
-#         user_input = st.text_input("What is the name of the bird you provided? (Check Spelling)").strip()
-#         st.write(f"{user_input.title()}, eh?")
-#         if user_input:
-#             if user_input.upper() in classes.values():
-#                 st.write("The model should've known that, but we made an incorrect prediction")
-#             else:
-#                 st.write("This type of bird is not present in our training data, sorry about that")
+                st.write("This type of bird was not present in our training data, sorry about that."
     
 
     github_project_url = "https://github.com/dvdhartsman/Bird_Species_Image_Classification"
@@ -193,10 +177,7 @@ def main():
     st.write(f"This model is based on a convolutional neural network (CNN) image classification model using Python, Tensorflow, and Keras, and it is informed by the EfficientNetB0 architecture. The model currently has an approximate 98% accuracy rate and can be found in {github_project_markdown}. Please feel free to connect with me on LinkedIn or via email.") 
 
 # Sidebar - Bio info
-st.sidebar.title('About Me:')
-
-# Headshot maybe
-# st.sidebar.image("app_images/headshot.jpg", use_column_width=True)
+st.sidebar.title('About Us:')
 
 # Variables for f-strings
 linkedin_url = "https://www.linkedin.com/in/david-hartsman-data/"
@@ -211,6 +192,19 @@ medium_markdown = f'[Blog]({medium_url})'
 st.sidebar.subheader('David Hartsman')
 st.sidebar.markdown(f"{linkedin_markdown} | {github_markdown} | {medium_markdown}", unsafe_allow_html=True)
 st.sidebar.write('dvdhartsman@gmail.com')
+                         
+# Heath display
+heath_linkedin_url = "https://www.linkedin.com/in/heefjones/"
+heath_github_url = "https://github.com/heefjones"
+heath_medium_url = "https://medium.com/@heefjones"
+                         
+heath_linkedin_markdown = f'[LinkedIn]({heath_linkedin_url})'
+heath_github_markdown = f'[GitHub]({heath_github_url})'
+heath_medium_markdown = f'[Blog]({heath_medium_url})'                         
+                         
+st.sidebar.subheader('Heath Jones')
+st.sidebar.markdown(f"{heath_linkedin_markdown} | {heath_github_markdown} | {heath_medium_markdown}", unsafe_allow_html=True)
+st.sidebar.write('heefjones9@gmail.com')
 
 # Run the app
 if __name__ == "__main__":
