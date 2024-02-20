@@ -1,6 +1,6 @@
 # Bird Species Image Classification:
 ### Using Computer Vision to Identify 525 Different Bird Species
-##### David Hartsman
+##### David Hartsman and Heath Jones
 [First Notebook](https://github.com/dvdhartsman/Bird_Species_Image_Classification/edit/main/README.md#:~:text=.gitignore-,Bird_Classification_1,-.ipynb)
 Preliminary EDA | Plotting | Data Understanding
 
@@ -12,7 +12,7 @@ Subsequent Model Iterations | Final Model Built on EfficientNetB0 | Final Though
 ### Overview
 <hr style="border: 2px solid red">
 
-In this project, I created a Convolutional Neural Network modeled on data from a Kaggle dataset containing roughly 90k images of 525 different bird species. I used tensorflow to create the Convolutional Neural Networks. The purpose was to maximize the model's ability to predict the correct species of the bird from an image. 
+In this project, we created a Convolutional Neural Network modeled on data from a Kaggle dataset containing roughly 90k images of 525 different bird species. I used tensorflow to create the Convolutional Neural Networks. The purpose was to maximize the model's ability to predict the correct species of the bird from an image. 
 
 ### Data
 <hr style="border: 2px solid red">
