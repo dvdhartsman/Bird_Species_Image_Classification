@@ -111,7 +111,7 @@ def main():
     # Scrolling List of Viable Species
     st.write("Here's a list of birds in our training data:")
     
-    formatted = pd.DataFrame(class_dictionary, index=range(1, 525))
+    formatted = pd.DataFrame(class_dictionary)
     formatted.columns = ["Species"]
     st.dataframe(formatted, width=300, hide_index=True)
     
