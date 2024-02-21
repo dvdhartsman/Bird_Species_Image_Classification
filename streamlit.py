@@ -27,8 +27,10 @@ def format_image(img_path):
         return None
 
 # Dictionary of Class/Species Values 
+
 # Load the csv, easier than manually writing the labels
 class_dictionary = pd.read_csv('streamlit_app/class_dictionary.csv', index_col=0)
+
 # Create a dictionary with the correct labels
 classes = class_dictionary.to_dict()["0"]
 
@@ -105,6 +107,15 @@ def main():
     st.markdown("---")
     
     st.subheader('Try your own bird image')
+    
+    # Scrolling List of Viable Species
+    st.write("Here's a list of birds in our training data:")
+    
+    formatted = pd.DataFrame(class_dictionary, index=range(1, 525))
+    formatted.columns = ["Species"]
+    st.dataframe(formatted, width=300, hide_index=True)
+    
+    
     st.write('Submit a bird image to identify which of the 525 known species it is!')
 
     # File uploader for image
