@@ -161,7 +161,7 @@ def main():
     if st.button("Yes"):
         # Reset the state when "Yes" is clicked
         st.session_state['no_clicked'] = False
-        st.write(f"Our model has a good eye for {get_prediction(input_data)}s")
+        st.write(f"Our model is adept at identifying the {get_prediction(input_data)}")
 
     if st.button("No"):
         # Set a flag to keep track of the "No" button being clicked
