@@ -58,7 +58,7 @@ def main():
     # Test out some of our images
     st.subheader("Give it a try!")
     
-    # Load your chest X-ray images (replace these paths with your actual file paths)
+    # Load your Bird images (replace these paths with your actual file paths)
     image_paths = ["streamlit_app/Ant_Bird_1.jpg", "streamlit_app/Lazuli_Bunting_1.jpg", "streamlit_app/Peregrine_Falcon_1.jpg", "streamlit_app/Tawny_Frogmouth_1.jpg"]
 
     # Function to resize the image to a specified width and height -> for display purposes only
@@ -161,7 +161,7 @@ def main():
     if st.button("Yes"):
         # Reset the state when "Yes" is clicked
         st.session_state['no_clicked'] = False
-        st.write(f"Our model is adept at identifying the {get_prediction(input_data)}")
+        st.write(f"Our model is good at identifying those!")
 
     if st.button("No"):
         # Set a flag to keep track of the "No" button being clicked
